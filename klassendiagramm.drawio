@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="D4_RKNdQsql9P3LpVE2z" name="Seite-1">
-        <mxGraphModel dx="1991" dy="1724" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1016" dy="1933" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -31,7 +31,7 @@
                 <mxCell id="17" value="folgt_listen" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
                     <mxGeometry x="54" y="-150" width="270" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="18" value="{ user id : &quot;user1_id&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="17">
+                <mxCell id="18" value="{ user id : &quot;user_profile_id&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="17">
                     <mxGeometry y="29" width="270" height="25" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="{ folgt: ['user2_id', 'user3_id', 'etc']}" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="17">
@@ -145,12 +145,6 @@
                         <mxPoint x="650" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="68" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=0;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;" edge="1" parent="1" source="34" target="27">
-                    <mxGeometry width="160" relative="1" as="geometry">
-                        <mxPoint x="490" as="sourcePoint"/>
-                        <mxPoint x="650" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="69" value="users" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
                     <mxGeometry x="-490" y="32" width="360" height="160" as="geometry"/>
                 </mxCell>
@@ -170,6 +164,12 @@
                     <mxGeometry width="160" relative="1" as="geometry">
                         <mxPoint x="-10" y="190" as="sourcePoint"/>
                         <mxPoint x="150" y="190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="78" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=0;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;exitX=0.626;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="27" target="34">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="460" y="180" as="sourcePoint"/>
+                        <mxPoint x="620" y="180" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
