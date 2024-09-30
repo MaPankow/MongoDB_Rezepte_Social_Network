@@ -1,0 +1,178 @@
+<mxfile host="65bd71144e">
+    <diagram id="D4_RKNdQsql9P3LpVE2z" name="Seite-1">
+        <mxGraphModel dx="1991" dy="1724" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="13" value="user_profile" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry y="9" width="380" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="{ username : &quot;user1&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="13">
+                    <mxGeometry y="29" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="{ profiltext : &quot;...&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="13">
+                    <mxGeometry y="54" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="{ geburtstag: JJJJ-MM-DD }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="13">
+                    <mxGeometry y="79" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="{ folgt: 'folgt_liste_id' }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="13">
+                    <mxGeometry y="104" width="380" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="{ rezeptbuch: rezeptbuch_id }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="13">
+                    <mxGeometry y="130" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="{ eigene_rezepte: ['rezept_brötchen_id', 'recipe_suppe_2_id', 'etc'] }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="13">
+                    <mxGeometry y="155" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="{social_links: [ { facebook : 'url', pinterest: 'url' } ] }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="13">
+                    <mxGeometry y="180" width="380" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="folgt_listen" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="54" y="-150" width="270" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="{ user id : &quot;user1_id&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="17">
+                    <mxGeometry y="29" width="270" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="{ folgt: ['user2_id', 'user3_id', 'etc']}" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="17">
+                    <mxGeometry y="54" width="270" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="rezeptbuch" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="370" y="-150" width="270" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="{ user id : &quot;referenced id&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="25">
+                    <mxGeometry y="29" width="270" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="{ recipes: ['recipe1_id', 'recipe2_id', 'etc'] }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="25">
+                    <mxGeometry y="54" width="270" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="rezepte" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="510" width="520" height="405" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="{ user id:&amp;nbsp; &quot;user_id&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="29" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="{ rezeptname : &quot;z. B. Schokokuchen&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="54" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="{ kategorien : [&quot;Gebäck&quot;, &quot;Kuchen&quot;] }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="79" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="{ beschreibung: &quot;Janz saftisch, wie beie Omma, hömma!&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="104" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="{ zutaten: [ {'zutat' : 'zutat1', 'menge: 2'}, {'zutat' : 'zutat2', 'menge_in_g' : 200}, {'etc' : '...'} ]" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="129" width="520" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="{ schwierigkeistgrad: &quot;...&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="155" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="{ zubereitungszeit_minuten: 90 }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="180" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="{ backzeit_minuten: 50 }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="205" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="{ instruktionen: [{schritt_1:&amp;nbsp; &quot;text&quot;}, {schritt_2: &quot;text&quot;}, {etc}" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="230" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="{ alternative_zutaten: [{für: 'Leinsamenei', ersatz: 'Banane'}" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="255" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="{ bewertungen: {anzahl: N, durchschnit: N,M}" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="280" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="{ allergene: [&quot;gluten&quot;, &quot;mandeln&quot;, &quot;soja&quot;, &quot;...&quot;]}" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="305" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="{ energie_in_kcal: NNNN}" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="330" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="{ sonstiges: &quot;kann auch als Muffins zubereitet werden, die Backzeit verringert sich auf ....&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="355" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="{ kommentare : &quot;kommentare_id&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="34">
+                    <mxGeometry y="380" width="520" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="kommentare" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="303" width="360" height="181" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="{ user_id : &quot;user_id&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="52">
+                    <mxGeometry y="29" width="360" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="{ rezept_id : &quot;rezept_id&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="52">
+                    <mxGeometry y="54" width="360" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="{ kommentar: &quot;...&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="52">
+                    <mxGeometry y="79" width="360" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="{ antwort1: {user_id: &quot;user_id&quot;, text: &quot;text&quot;, likes: N} }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="52">
+                    <mxGeometry y="104" width="360" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="{ antwortN: {user_id: &quot;user_id&quot;, text: &quot;text&quot;, likes: N} }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="52">
+                    <mxGeometry y="130" width="360" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="{ likes: N }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="52">
+                    <mxGeometry y="156" width="360" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=1;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;" edge="1" parent="1" source="13" target="27">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="420" as="sourcePoint"/>
+                        <mxPoint x="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="63" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=0;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;" edge="1" parent="1" source="48" target="34">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="420" as="sourcePoint"/>
+                        <mxPoint x="550" y="100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="64" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=0;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;" edge="1" parent="1" source="48" target="52">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="490" y="480" as="sourcePoint"/>
+                        <mxPoint x="650" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="65" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=1;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;" edge="1" parent="1" source="51" target="52">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="490" y="480" as="sourcePoint"/>
+                        <mxPoint x="650" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="66" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=1;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;" edge="1" parent="1" source="13" target="19">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="490" as="sourcePoint"/>
+                        <mxPoint x="650" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="68" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=0;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;" edge="1" parent="1" source="34" target="27">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="490" as="sourcePoint"/>
+                        <mxPoint x="650" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="69" value="users" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=29;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;html=1;fillColor=#cdeb8b;strokeColor=#36393d;" vertex="1" parent="1">
+                    <mxGeometry x="-490" y="32" width="360" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="{ name : &quot;...&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="69">
+                    <mxGeometry y="29" width="360" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="{ email : &quot;user1@userhausen.de&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="69">
+                    <mxGeometry y="54" width="360" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="{ passwort: &quot;hashed&quot; }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="69">
+                    <mxGeometry y="79" width="360" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="{ benachrichtigungen_mail: &lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;{kommentare_antworten: true},&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;/span&gt;{bewertungen: false},&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;/span&gt;{neue_follower: false} }" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="69">
+                    <mxGeometry y="104" width="360" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=1;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;" edge="1" parent="1" source="69" target="13">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="-10" y="190" as="sourcePoint"/>
+                        <mxPoint x="150" y="190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
