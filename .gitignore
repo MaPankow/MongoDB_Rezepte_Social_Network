@@ -1,7 +1,5 @@
-.drawio
+*.drawio
 bsp_klassendiagramm.png
-users.json
-rezepte.json
-user_profile.json
+*.json
 json_erstellen.py
 chat_2024_10_01_15_27_41.md
