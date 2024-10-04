@@ -3,524 +3,7 @@
 // Select the database to use.
 use('planet-A');
 
-// db.createCollection("users");
-// db.users.insertMany(
-//     [
-//         {
-//             "name": "Max Mustermann",
-//             "email": "max.mustermann@example.com",
-//             "passwort": "P@ssw0rd123!",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Anna Müller",
-//             "email": "anna.mueller@example.com",
-//             "passwort": "S3cur3P@ssw0rd!",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Peter Schmidt",
-//             "email": "peter.schmidt@example.com",
-//             "passwort": "P@ssw0rd!2023",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Laura Becker",
-//             "email": "laura.becker@example.com",
-//             "passwort": "L@uraBecker#1234",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": false,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Thomas Wagner",
-//             "email": "thomas.wagner@example.com",
-//             "passwort": "T@h0m@5W@gner!",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": true,
-//                 "neue_follower": true
-//             }
-//         },
-//         {
-//             "name": "Julia Fischer",
-//             "email": "julia.fischer@example.com",
-//             "passwort": "Juli@F1scher2023",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Markus Hoffmann",
-//             "email": "markus.hoffmann@example.com",
-//             "passwort": "M@rku5H0ffm@n!",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": true
-//             }
-//         },
-//         {
-//             "name": "Sophie Schneider",
-//             "email": "sophie.schneider@example.com",
-//             "passwort": "S0ph!eSchne!der2023",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": true,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "David Klein",
-//             "email": "david.klein@example.com",
-//             "passwort": "D@v!dKlein#2023",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": false,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Lisa Braun",
-//             "email": "lisa.braun@example.com",
-//             "passwort": "L1s@Br@un2023!",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Jan Richter",
-//             "email": "jan.richter@example.com",
-//             "passwort": "J@nr!chter1234",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": false,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Nina Schwarz",
-//             "email": "nina.schwarz@example.com",
-//             "passwort": "N!n@Schw@rz2023",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": true,
-//                 "neue_follower": true
-//             }
-//         },
-//         {
-//             "name": "Felix Zimmermann",
-//             "email": "felix.zimmermann@example.com",
-//             "passwort": "F3l!xZ!mm3rm@n",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Klara Wolf",
-//             "email": "klara.wolf@example.com",
-//             "passwort": "Klar@W0lf2023!",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Leon Weber",
-//             "email": "leon.weber@example.com",
-//             "passwort": "L3onW3ber@2023",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": false,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Emma Wagner",
-//             "email": "emma.wagner@example.com",
-//             "passwort": "Emm@W@gner123!",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Simon Hartmann",
-//             "email": "simon.hartmann@example.com",
-//             "passwort": "S!m0nH@rtm@n2023",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Marie König",
-//             "email": "marie.koenig@example.com",
-//             "passwort": "M@rieK0n!g2023",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Paul Schulte",
-//             "email": "paul.schulte@example.com",
-//             "passwort": "P@ulSchult3#2023",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": false,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "name": "Tina Peters",
-//             "email": "tina.peters@example.com",
-//             "passwort": "T!n@Peters1234",
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": true
-//             }
-//         }
-//     ]
-// );
-
-// db.createCollection("user_profile");
-// db.user_profile.insertMany(
-    
-//         [
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e2c",
-//                 "username": "Max Mustermann",
-//                 "profiltext": "Ich liebe es, vegane Rezepte zu kreieren, besonders meine berühmten Linsensuppe.",
-//                 "geburtstag": "1985-03-12",
-//                 "social_links": {
-//                     "facebook": "https://facebook.com/max.mustermann",
-//                     "instagram": "https://instagram.com/max.mustermann"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e2d",
-//                 "username": "Anna Müller",
-//                 "profiltext": "Mein Lieblingsgericht ist veganes Chili. Es ist einfach und köstlich!",
-//                 "geburtstag": "1990-07-25",
-//                 "social_links": {
-//                     "facebook": "https://facebook.com/anna.mueller"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e2e",
-//                 "username": "Peter Schmidt",
-//                 "profiltext": "Ich bin ein Fan von Smoothies und experimentiere gerne mit neuen Zutaten.",
-//                 "geburtstag": "1978-11-14",
-//                 "social_links": {
-//                     "instagram": "https://instagram.com/peter.schmidt"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e2f",
-//                 "username": "Laura Becker",
-//                 "profiltext": "",
-//                 "geburtstag": "1995-01-30",
-//                 "social_links": {
-//                     "facebook": "https://facebook.com/laura.becker",
-//                     "pinterest": "https://pinterest.com/laura.becker"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e30",
-//                 "username": "Thomas Wagner",
-//                 "profiltext": "Ich genieße es, vegane Desserts zu backen, besonders Schokoladenkekse.",
-//                 "geburtstag": "1982-09-05",
-//                 "social_links": {
-//                     "instagram": "https://instagram.com/thomas.wagner"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e31",
-//                 "username": "Julia Fischer",
-//                 "profiltext": "Ich liebe es, neue vegane Rezepte auszuprobieren und zu teilen.",
-//                 "geburtstag": "1989-04-20",
-//                 "social_links": {
-//                     "facebook": "https://facebook.com/julia.fischer"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e32",
-//                 "username": "Markus Hoffmann",
-//                 "profiltext": "",
-//                 "geburtstag": "1965-12-15",
-//                 "social_links": {
-//                     "pinterest": "https://pinterest.com/markus.hoffmann"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e33",
-//                 "username": "Sophie Schneider",
-//                 "profiltext": "Ich koche leidenschaftlich gerne vegane Pasta mit frischem Gemüse.",
-//                 "geburtstag": "1980-06-22",
-//                 "social_links": {
-//                     "instagram": "https://instagram.com/sophie.schneider"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e34",
-//                 "username": "David Klein",
-//                 "profiltext": "",
-//                 "geburtstag": "1975-08-10",
-//                 "social_links": {
-//                     "facebook": "https://facebook.com/david.klein"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e35",
-//                 "username": "Lisa Braun",
-//                 "profiltext": "Vegane Burger sind meine Leidenschaft! Ich liebe es, neue Variationen zu kreieren.",
-//                 "geburtstag": "1992-05-18",
-//                 "social_links": {
-//                     "pinterest": "https://pinterest.com/lisa.braun"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e36",
-//                 "username": "Jan Richter",
-//                 "profiltext": "",
-//                 "geburtstag": "1988-02-28",
-//                 "social_links": {}
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e37",
-//                 "username": "Nina Schwarz",
-//                 "profiltext": "Ich liebe es, vegane Snacks zu machen, besonders Energiebällchen.",
-//                 "geburtstag": "1994-10-09",
-//                 "social_links": {
-//                     "facebook": "https://facebook.com/nina.schwarz",
-//                     "instagram": "https://instagram.com/nina.schwarz"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e38",
-//                 "username": "Felix Zimmermann",
-//                 "profiltext": "Ich experimentiere gerne mit verschiedenen veganen Käsesorten.",
-//                 "geburtstag": "1972-03-03",
-//                 "social_links": {
-//                     "instagram": "https://instagram.com/felix.zimmermann"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e39",
-//                 "username": "Klara Wolf",
-//                 "profiltext": "",
-//                 "geburtstag": "1981-07-21",
-//                 "social_links": {
-//                     "facebook": "https://facebook.com/klara.wolf"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e3a",
-//                 "username": "Leon Weber",
-//                 "profiltext": "Ich liebe es, veganes Sushi zu machen und mit Freunden zu teilen.",
-//                 "geburtstag": "1996-11-11",
-//                 "social_links": {}
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e3b",
-//                 "username": "Emma Wagner",
-//                 "profiltext": "Meine Spezialität sind vegane Muffins, die einfach unwiderstehlich sind!",
-//                 "geburtstag": "1993-04-27",
-//                 "social_links": {
-//                     "pinterest": "https://pinterest.com/emma.wagner"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e3c",
-//                 "username": "Simon Hartmann",
-//                 "profiltext": "Ich genieße es, neue vegane Rezepte zu entwickeln und zu testen.",
-//                 "geburtstag": "1987-09-16",
-//                 "social_links": {
-//                     "instagram": "https://instagram.com/simon.hartmann"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e3d",
-//                 "username": "Marie König",
-//                 "profiltext": "",
-//                 "geburtstag": "1991-01-01",
-//                 "social_links": {}
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e3e",
-//                 "username": "Paul Schulte",
-//                 "profiltext": "Ich liebe es, vegane Gerichte zu kochen und neue Rezepte zu entdecken.",
-//                 "geburtstag": "1984-08-08",
-//                 "social_links": {
-//                     "facebook": "https://facebook.com/paul.schulte"
-//                 }
-//             },
-//             {
-//                 "user_id": "66fab69a32a76bc5dd059e3f",
-//                 "username": "Tina Peters",
-//                 "profiltext": "Veganes Essen ist meine Leidenschaft, besonders frische Salate!",
-//                 "geburtstag": "1999-12-12",
-//                 "social_links": {
-//                     "instagram": "https://instagram.com/tina.peters"
-//                 }
-//             }
-//         ]
-    
-// );
-
-// db.user_profile.drop();
-
-// db.users.deleteMany({});
-
-// db.users.insertMany(
-//     [
-//         {
-//             "username": "vegan_chef_mia",
-//             "email": "mia.vegan@example.com",
-//             "passwort": "$2a$10$KIXm3R8GZ8K8s5QY8g5h8.0N7K5Wg1qTtL2uR8pXH1RzF0B8cN5fO", 
-//             "profiltext": "Hallo! Ich bin Mia und leidenschaftliche Veganerin. Ich liebe es, neue Rezepte auszuprobieren und gesunde, pflanzliche Mahlzeiten zu kreieren. Mein Ziel ist es, die vegane Küche für alle zugänglich zu machen. Lass uns gemeinsam kochen!",
-//             "geburtsdatum": "1985-03-15",
-//             "social_links": {
-//                 "facebook": "facebook.com/vegan_chef_mia",
-//                 "instagram": "instagram.com/vegan_chef_mia"
-//             },
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": true,
-//                 "neue_follower": true
-//             }
-//         },
-//         {
-//             "username": "plantbased_peter",
-//             "email": "peter.plantbased@example.com",
-//             "passwort": "$2a$10$JdV4FQW9Tz5qY5e2k3r0oO8M6yGkGZt9R8H1uO1l5y2c6Y7mRzO1i",
-//             "profiltext": "Ich bin Peter, ein begeisterter Koch, der sich auf pflanzliche Küche spezialisiert hat. Ich teile gerne meine Tipps und Tricks für die Zubereitung köstlicher veganer Gerichte. Lass uns zusammen die Vielfalt der veganen Küche entdecken!",
-//             "social_links": {
-//                 "instagram": "instagram.com/plantbased_peter",
-//                 "pinterest": "pinterest.com/plantbased_peter"
-//             },
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": true
-//             }
-//         },
-//         {
-//             "username": "green_guru_lisa",
-//             "email": "lisa.green@example.com",
-//             "passwort": "$2a$10$7A0l2N2eH6l9Q5r1t8Q5eOe6K1RzF1W8S0N1Z2h8N8Rz4L5B9C5rC",
-//             "profiltext": "Ich bin Lisa, die grüne Guru! Ich liebe es, mit frischen Zutaten zu experimentieren und gesunde, vegane Rezepte zu kreieren. Ich teile auch meine Erfahrungen über nachhaltige Lebensstile und Ernährung.",
-//             "geburtsdatum": "1990-07-22",
-//             "social_links": {
-//                 "facebook": "facebook.com/green_guru_lisa",
-//                 "instagram": "instagram.com/green_guru_lisa",
-//                 "pinterest": "pinterest.com/green_guru_lisa"
-//             },
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": false,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "username": "vegan_victor",
-//             "email": "victor.vegan@example.com",
-//             "passwort": "$2a$10$4hW8t3G8t9F8O2e3Z1t7eO1N5K2lG2s6H5T0H1R8H5G2D5F7J5l1C",
-//             "profiltext": "Ich bin Victor und ein Fan von veganer Küche! Ich genieße es, neue Rezepte zu kreieren und meine Leidenschaft für gesunde Ernährung mit anderen zu teilen. Kommt mit mir auf eine kulinarische Reise!",
-//             "geburtsdatum": "1975-11-30",
-//             "social_links": {
-//                 "facebook": "facebook.com/vegan_victor"
-//             },
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": true,
-//                 "neue_follower": false
-//             }
-//         },
-//         {
-//             "username": "nourish_nina",
-//             "email": "nina.nourish@example.com",
-//             "passwort": "$2a$10$8F2t3R8H6J5T1y2Y3o7k6eO5L1RzG3F4H5S7B1N0Y4F2D6G4H5x1O",
-//             "profiltext": "Hallo, ich bin Nina! Ich interessiere mich für vegane Ernährung und gesunde Lebensweise. Ich teile meine Lieblingsrezepte und Tipps für ein gesundes Leben. Lass uns zusammen die Welt der pflanzlichen Ernährung erkunden!",
-//             "social_links": {
-//                 "instagram": "instagram.com/nourish_nina",
-//                 "pinterest": "pinterest.com/nourish_nina"
-//             },
-//             "benachrichtigungen_mail": {
-//                 "kommentare_antworten": true,
-//                 "bewertungen": false,
-//                 "neue_follower": false
-//             }
-//         }
-//     ]
-    
-// );
-
 // db.createCollection("rezepte");
-
-// db.rezepte.insertOne(
-//     {
-//         "user": {
-//           "user_id": { "$oid": "66fd53880eabdff47cb41778" },
-//           "username": "vegan_chef_mia"
-//         },
-//         "rezeptname": "Spinatsalat mit Nüssen",
-//         "kategorien": ["Salat", "Spinat"],
-//         "beschreibung": "Ein gesunder Spinatsalat, der mit Nüssen und einem leckeren Dressing verfeinert wird.",
-//         "zutaten": [
-//           { "zutat": "Frischer Spinat", "menge": "150 g" },
-//           { "zutat": "Walnüsse", "menge": "50 g" },
-//           { "zutat": "Äpfel", "menge": "1 Stück" },
-//           { "zutat": "Olivenöl", "menge": "30 ml" },
-//           { "zutat": "Apfelessig", "menge": "20 ml" },
-//           { "zutat": "Veganer Honig", "menge": "1 TL" },
-//           { "zutat": "Salz", "menge": "1 Prise" },
-//           { "zutat": "Pfeffer", "menge": "1 Prise" }
-//         ],
-//         "schwierigkeitsgrad": "leicht",
-//         "zubereitungszeit_minuten": 20,
-//         "instruktionen": [
-//           { "schritt_1": "Wasche den frischen Spinat gründlich." },
-//           { "schritt_2": "Schneide den Apfel in dünne Scheiben." },
-//           { "schritt_3": "Mische den Spinat mit den Apfelscheiben und Walnüssen." },
-//           { "schritt_4": "Vermenge Olivenöl, Apfelessig, Honig, Salz und Pfeffer zu einem Dressing." },
-//           { "schritt_5": "Gieße das Dressing über den Salat und serviere ihn sofort." }
-//         ],
-//         "alternative Zutaten": [
-//           { "zutat": "Walnüsse", "ersatz": "Mandeln" },
-//           { "zutat": "Veganer Honig", "ersatz": "Akaziensirup"}
-//         ],
-//         "allergene": ["Walnüsse"],
-//         "energie_in_kcal": 300
-//       }
-      
-// );
 
 // db.rezepte.insertOne(
 //     {
@@ -594,3 +77,393 @@ use('planet-A');
       
 // )
 
+// db.rezepte.insertMany(
+//     [{
+//         "user": {
+//             "user_id": { "$oid": "66fd53880eabdff47cb41779" },
+//             "username": "plantbased_peter"
+//         },
+//         "rezeptname": "Deftiges Seitan-Geschnetzeltes",
+//         "kategorien": ["Hauptspeise", "deftig", "Seitan"],
+//         "beschreibung": "Ein herzhaftes Gericht aus zartem Seitan, perfekt gewürzt und in einer cremigen Sauce serviert.",
+//         "zutaten": [
+//             { "zutat": "Seitan", "menge": "300 g" },
+//             { "zutat": "Zwiebel", "menge": "1 Stück" },
+//             { "zutat": "Paprika", "menge": "1 Stück" },
+//             { "zutat": "Sojasauce", "menge": "50 ml" },
+//             { "zutat": "Kokosmilch", "menge": "200 ml" },
+//             { "zutat": "Gewürze", "menge": "nach Geschmack" }
+//         ],
+//         "schwierigkeitsgrad": "mittel",
+//         "zubereitungszeit_minuten": 45,
+//         "instruktionen": [
+//             { "schritt_1": "Schneide den Seitan in dünne Streifen." },
+//             { "schritt_2": "Zwiebel und Paprika klein schneiden." },
+//             { "schritt_3": "Erhitze etwas Öl in einer Pfanne und brate die Zwiebel an." },
+//             { "schritt_4": "Füge die Paprika hinzu und brate sie kurz mit." },
+//             { "schritt_5": "Gib den Seitan und die Sojasauce dazu und brate alles gut an." },
+//             { "schritt_6": "Gieße die Kokosmilch dazu und lasse das Gericht kurz köcheln." },
+//             { "schritt_7": "Mit Gewürzen abschmecken und servieren." }
+//         ],
+//         "alternative Zutaten": [
+//             { "zutat": "Seitan", "ersatz": "Tofu" }
+//         ],
+//         "allergene": ["Sojasauce"],
+//         "energie_in_kcal": 500
+//     },
+//     {
+//         "user": {
+//             "user_id": { "$oid": "66fd53880eabdff47cb41779" },
+//             "username": "plantbased_peter"
+//         },
+//         "rezeptname": "Vegane Bouletten",
+//         "kategorien": ["Hauptspeise", "deftig"],
+//         "beschreibung": "Saftige Bouletten aus veganem Hack, ideal für ein herzhaftes Abendessen.",
+//         "zutaten": [
+//             { "zutat": "veganes Hack", "menge": "400 g" },
+//             { "zutat": "Zwiebel", "menge": "1 Stück" },
+//             { "zutat": "Paniermehl", "menge": "100 g" },
+//             { "zutat": "Kräuter", "menge": "nach Geschmack" },
+//             { "zutat": "Öl", "menge": "zum Braten" }
+//         ],
+//         "schwierigkeitsgrad": "leicht",
+//         "zubereitungszeit_minuten": 30,
+//         "instruktionen": [
+//             { "schritt_1": "Zwiebel fein hacken und in einer Pfanne anbraten." },
+//             { "schritt_2": "Das vegane Hack in eine Schüssel geben." },
+//             { "schritt_3": "Zwiebel und Paniermehl hinzufügen und gut vermischen." },
+//             { "schritt_4": "Mit Kräutern abschmecken und kleine Bouletten formen." },
+//             { "schritt_5": "Öl in einer Pfanne erhitzen und die Bouletten goldbraun braten." }
+//         ],
+//         "allergene": ["Paniermehl"],
+//         "energie_in_kcal": 400
+//     },
+//     {
+//         "user": {
+//             "user_id": { "$oid": "66fd53880eabdff47cb41779" },
+//             "username": "plantbased_peter"
+//         },
+//         "rezeptname": "Chili Sin Carne",
+//         "kategorien": ["Hauptspeise", "deftig", "warm"],
+//         "beschreibung": "Ein würziges Chili mit Bohnen und Gemüse, das sättigt und wärmt.",
+//         "zutaten": [
+//             { "zutat": "Kidneybohnen", "menge": "200 g" },
+//             { "zutat": "Mais", "menge": "150 g" },
+//             { "zutat": "Paprika", "menge": "1 Stück" },
+//             { "zutat": "Zwiebel", "menge": "1 Stück" },
+//             { "zutat": "Tomaten", "menge": "400 g" },
+//             { "zutat": "Chili-Gewürz", "menge": "nach Geschmack" }
+//         ],
+//         "schwierigkeitsgrad": "mittel",
+//         "zubereitungszeit_minuten": 60,
+//         "instruktionen": [
+//             { "schritt_1": "Zwiebel und Paprika klein schneiden." },
+//             { "schritt_2": "In einem Topf die Zwiebel anbraten." },
+//             { "schritt_3": "Paprika hinzufügen und kurz mitbraten." },
+//             { "schritt_4": "Die Tomaten und die Bohnen dazugeben und alles gut umrühren." },
+//             { "schritt_5": "Mit Chili-Gewürz abschmecken und 30 Minuten köcheln lassen." },
+//             { "schritt_6": "Den Mais hinzufügen und weitere 10 Minuten kochen." }
+//         ],
+//         "allergene": [],
+//         "energie_in_kcal": 350
+//     }]
+
+// );
+
+// db.rezepte.insertMany(
+//     [
+//         {
+//             "user": {
+//               "user_id": { "$oid": "66fd53880eabdff47cb4177a" },
+//               "username": "green_guru_lisa"
+//             },
+//             "rezeptname": "Vegane Pho-Suppe",
+//             "kategorien": ["Hauptspeise", "vietnamesisch"],
+//             "beschreibung": "Eine aromatische und gesunde vietnamesische Suppe, die mit frischen Kräutern und Gewürzen zubereitet wird.",
+//             "zutaten": [
+//               { "zutat": "Reisnudeln", "menge": "200 g" },
+//               { "zutat": "Gemüsebrühe", "menge": "1 l" },
+//               { "zutat": "Sojasprossen", "menge": "100 g" },
+//               { "zutat": "Koriander", "menge": "50 g" },
+//               { "zutat": "Thai-Basilikum", "menge": "50 g" },
+//               { "zutat": "Ingwer", "menge": "30 g" },
+//               { "zutat": "Limette", "menge": "1 Stück" },
+//               { "zutat": "Chili", "menge": "1 Stück" }
+//             ],
+//             "schwierigkeitsgrad": "leicht",
+//             "zubereitungszeit_minuten": 30,
+//             "instruktionen": [
+//               { "schritt_1": "Koche die Reisnudeln nach Packungsanweisung." },
+//               { "schritt_2": "Erhitze die Gemüsebrühe in einem Topf und füge den Ingwer hinzu." },
+//               { "schritt_3": "Lass die Brühe für 10 Minuten köcheln." },
+//               { "schritt_4": "Füge die gekochten Reisnudeln, Sojasprossen und frische Kräuter hinzu." },
+//               { "schritt_5": "Serviere die Suppe mit Limettensaft und Chili." }
+//             ],
+            
+//             "allergene": ["Sojasprossen"],
+//             "energie_in_kcal": 350
+//           },
+//           {
+//             "user": {
+//               "user_id": { "$oid": "66fd53880eabdff47cb4177a" },
+//               "username": "green_guru_lisa"
+//             },
+//             "rezeptname": "Indisches Curry mit Tofu",
+//             "kategorien": ["Hauptspeise", "indisch", "Tofu"],
+//             "beschreibung": "Ein cremiges und würziges Curry, das Tofu und Gemüse kombiniert und mit Reis serviert wird.",
+//             "zutaten": [
+//               { "zutat": "Tofu", "menge": "250 g" },
+//               { "zutat": "Kokosmilch", "menge": "400 ml" },
+//               { "zutat": "Currypaste", "menge": "2 EL" },
+//               { "zutat": "Brokkoli", "menge": "200 g" },
+//               { "zutat": "Karotten", "menge": "150 g" },
+//               { "zutat": "Reis", "menge": "200 g" },
+//               { "zutat": "Zwiebel", "menge": "1 Stück" },
+//               { "zutat": "Knoblauch", "menge": "2 Zehen" }
+//             ],
+//             "schwierigkeitsgrad": "mittel",
+//             "zubereitungszeit_minuten": 45,
+//             "instruktionen": [
+//               { "schritt_1": "Schneide den Tofu in Würfel und brate ihn in einer Pfanne goldbraun." },
+//               { "schritt_2": "Zwiebel und Knoblauch fein hacken und in der Pfanne anbraten." },
+//               { "schritt_3": "Füge die Currypaste hinzu und brate sie kurz mit." },
+//               { "schritt_4": "Gib das Gemüse und die Kokosmilch dazu und lass alles köcheln." },
+//               { "schritt_5": "Serviere das Curry mit gekochtem Reis." }
+//             ],
+//             "alternative Zutaten": [
+//               { "zutat": "Tofu", "ersatz": "Tempeh" }
+//             ],
+//             "allergene": ["Sojasprossen"],
+//             "energie_in_kcal": 600
+//           },
+//           {
+//             "user": {
+//               "user_id": { "$oid": "66fd53880eabdff47cb4177a" },
+//               "username": "green_guru_lisa"
+//             },
+//             "rezeptname": "Reisbandnudelsalat mit Mango und Avocado",
+//             "kategorien": ["Salat", "kalte Küche"],
+//             "beschreibung": "Ein erfrischender Salat mit Reisbandnudeln, fruchtiger Mango und cremiger Avocado.",
+//             "zutaten": [
+//               { "zutat": "Reisbandnudeln", "menge": "150 g" },
+//               { "zutat": "Mango", "menge": "1 Stück" },
+//               { "zutat": "Avocado", "menge": "1 Stück" },
+//               { "zutat": "Koriander", "menge": "50 g" },
+//               { "zutat": "Limette", "menge": "1 Stück" },
+//               { "zutat": "Chili", "menge": "1 Stück" },
+//               { "zutat": "Sesamöl", "menge": "2 EL" }
+//             ],
+//             "schwierigkeitsgrad": "leicht",
+//             "zubereitungszeit_minuten": 20,
+//             "instruktionen": [
+//               { "schritt_1": "Koche die Reisbandnudeln nach Packungsanweisung." },
+//               { "schritt_2": "Schneide die Mango und Avocado in Würfel." },
+//               { "schritt_3": "Mische die Nudeln mit Mango, Avocado und Koriander." },
+//               { "schritt_4": "Gib Sesamöl und Limettensaft dazu und vermische alles gut." },
+//               { "schritt_5": "Serviere den Salat kalt." }
+//             ],
+//             "alternative Zutaten": [],
+//             "allergene": [],
+//             "energie_in_kcal": 400
+//           }
+          
+          
+           
+//         ]
+
+// );
+
+// db.rezepte.insertMany(
+//     [
+//         {
+//             "user": {
+//               "user_id": { "$oid": "66fd53880eabdff47cb4177b" },
+//               "username": "vegan_victor"
+//             },
+//             "rezeptname": "Bruschetta mit Tomaten und Basilikum",
+//             "kategorien": ["Vorspeise", "italienisch", "kalte Küche"],
+//             "beschreibung": "Eine klassische italienische Vorspeise, die frisch und aromatisch ist. Perfekt für einen Sommerabend.",
+//             "zutaten": [
+//               { "zutat": "Baguette", "menge": "1 Stück" },
+//               { "zutat": "Tomaten", "menge": "4 Stück" },
+//               { "zutat": "Frisches Basilikum", "menge": "1 Bund" },
+//               { "zutat": "Olivenöl", "menge": "50 ml" },
+//               { "zutat": "Salz", "menge": "1 Prise" },
+//               { "zutat": "Pfeffer", "menge": "1 Prise" }
+//             ],
+//             "schwierigkeitsgrad": "leicht",
+//             "zubereitungszeit_minuten": 20,
+//             "instruktionen": [
+//               { "schritt_1": "Schneide das Baguette in Scheiben und röste es kurz im Ofen." },
+//               { "schritt_2": "Schneide die Tomaten in kleine Würfel und mische sie mit Olivenöl, Salz, Pfeffer und gehacktem Basilikum." },
+//               { "schritt_3": "Verteile die Tomatenmischung auf den gerösteten Baguettescheiben und serviere sie sofort." }
+//             ],
+            
+//             "allergene": ["Gluten"],
+//             "energie_in_kcal": 250
+//           },
+//           {
+//             "user": {
+//               "user_id": { "$oid": "66fd53880eabdff47cb4177b" },
+//               "username": "vegan_victor"
+//             },
+//             "rezeptname": "Gegrillte Zucchini mit Erdnussbutter",
+//             "kategorien": ["Vorspeise", "kalte Küche", "vegan"],
+//             "beschreibung": "Ein kreatives und unerwartetes Gericht, das die Süße von Zucchini mit der herzhaften Erdnussbutter kombiniert.",
+//             "zutaten": [
+//               { "zutat": "Zucchini", "menge": "2 Stück" },
+//               { "zutat": "Erdnussbutter", "menge": "100 g" },
+//               { "zutat": "Olivenöl", "menge": "30 ml" },
+//               { "zutat": "Salz", "menge": "1 Prise" },
+//               { "zutat": "Pfeffer", "menge": "1 Prise" }
+//             ],
+//             "schwierigkeitsgrad": "mittel",
+//             "zubereitungszeit_minuten": 30,
+//             "instruktionen": [
+//               { "schritt_1": "Schneide die Zucchini längs in Scheiben und mariniere sie mit Olivenöl, Salz und Pfeffer." },
+//               { "schritt_2": "Grille die Zucchinischeiben für etwa 5-7 Minuten auf jeder Seite." },
+//               { "schritt_3": "Serviere die gegrillten Zucchini mit einem Klecks Erdnussbutter oben drauf." }
+//             ],
+          
+//             "allergene": ["Erdnüsse"],
+//             "energie_in_kcal": 300
+//           },
+//           {
+//             "user": {
+//               "user_id": { "$oid": "66fd53880eabdff47cb4177b" },
+//               "username": "vegan_victor"
+//             },
+//             "rezeptname": "Veganer Schokoladenpudding",
+//             "kategorien": ["Dessert", "vegan", "süß"],
+//             "beschreibung": "Ein cremiger und köstlicher Schokoladenpudding, der einfach zuzubereiten ist und ganz ohne tierische Produkte auskommt.",
+//             "zutaten": [
+//               { "zutat": "Kakaopulver", "menge": "50 g" },
+//               { "zutat": "Kokosmilch", "menge": "400 ml" },
+//               { "zutat": "Agavendicksaft", "menge": "100 ml" },
+//               { "zutat": "Speisestärke", "menge": "40 g" },
+//               { "zutat": "Vanilleextrakt", "menge": "1 TL" }
+//             ],
+//             "schwierigkeitsgrad": "leicht",
+//             "zubereitungszeit_minuten": 15,
+//             "instruktionen": [
+//               { "schritt_1": "Mische in einem Topf Kakaopulver, Speisestärke und Agavendicksaft." },
+//               { "schritt_2": "Füge die Kokosmilch und den Vanilleextrakt hinzu und rühre alles gut um." },
+//               { "schritt_3": "Erhitze die Mischung unter ständigem Rühren, bis sie dickflüssig wird. Gieße den Pudding in Schalen und lasse ihn abkühlen." }
+//             ],
+        
+//             "allergene": ["Kokosnüsse"],
+//             "energie_in_kcal": 350
+//           }
+          
+          
+           
+//         ]
+
+// );
+
+db.rezepte.insertMany(
+    [
+        {
+            "user": {
+              "user_id": { "$oid": "66fd53880eabdff47cb4177c" },
+              "username": "nourish_nina"
+            },
+            "rezeptname": "Veganer Schokoladenkuchen",
+            "kategorien": ["Gebäck", "Nachspeise"],
+            "zutaten": [
+              { "zutat": "Mehl", "menge": "250 g" },
+              { "zutat": "Zucker", "menge": "200 g" },
+              { "zutat": "Kakaopulver", "menge": "50 g" },
+              { "zutat": "Backpulver", "menge": "1 Päckchen" },
+              { "zutat": "pflanzliche Milch", "menge": "200 ml" },
+              { "zutat": "Öl", "menge": "100 ml" },
+              { "zutat": "Apfelmus", "menge": "100 g" }
+            ],
+            "schwierigkeitsgrad": "mittel",
+            "zubereitungszeit_minuten": 45,
+            "backzeit_min": 30,
+            "instruktionen": [
+              { "schritt_1": "Heize den Ofen auf 180 Grad vor." },
+              { "schritt_2": "Vermische alle trockenen Zutaten in einer Schüssel." },
+              { "schritt_3": "Füge die feuchten Zutaten hinzu und verrühre alles gut." },
+              { "schritt_4": "Gieße den Teig in eine gefettete Kuchenform." },
+              { "schritt_5": "Backe den Kuchen für 30 Minuten." },
+              { "schritt_6": "Lass den Kuchen abkühlen und serviere ihn." }
+            ],
+            "alternative Zutaten": [
+              { "zutat": "Zucker", "ersatz": "Agavendicksaft" }
+            ],
+            "allergene": ["Mehl", "Öl"],
+            "energie_in_kcal": 350
+          },
+          {
+            "user": {
+              "user_id": { "$oid": "66fd53880eabdff47cb4177c" },
+              "username": "nourish_nina"
+            },
+            "rezeptname": "Vegane Zimtschnecken",
+            "kategorien": ["Gebäck", "Nachspeise", "Hefe"],
+            "zutaten": [
+              { "zutat": "Mehl", "menge": "500 g" },
+              { "zutat": "Hefe", "menge": "1 Päckchen" },
+              { "zutat": "Zucker", "menge": "100 g" },
+              { "zutat": "pflanzliche Milch", "menge": "250 ml" },
+              { "zutat": "Öl", "menge": "75 ml" },
+              { "zutat": "Zimt", "menge": "2 TL" },
+              { "zutat": "Salz", "menge": "1 Prise" }
+            ],
+            "schwierigkeitsgrad": "mittel",
+            "zubereitungszeit_minuten": 60,
+            "backzeit_min": 25,
+            "instruktionen": [
+              { "schritt_1": "Erwärme die pflanzliche Milch und löse die Hefe darin auf." },
+              { "schritt_2": "Vermische das Mehl, Zucker, Salz und Zimt in einer Schüssel." },
+              { "schritt_3": "Füge die Hefe-Milch-Mischung und das Öl hinzu und knete den Teig." },
+              { "schritt_4": "Lass den Teig an einem warmen Ort für 30 Minuten ruhen." },
+              { "schritt_5": "Rolle den Teig aus, bestreue ihn mit Zimt und Zucker, und forme die Schnecken." },
+              { "schritt_6": "Backe die Zimtschnecken bei 180 Grad für 25 Minuten." }
+            ],
+            "allergene": ["Mehl", "Öl"],
+            "energie_in_kcal": 250
+          },
+
+          {
+            "user": {
+              "user_id": { "$oid": "66fd53880eabdff47cb4177c" },
+              "username": "nourish_nina"
+            },
+            "rezeptname": "Veganes Bananenbrot",
+            "kategorien": ["Gebäck", "Nachspeise"],
+            "zutaten": [
+              { "zutat": "Bananen", "menge": "3 Stück" },
+              { "zutat": "Mehl", "menge": "200 g" },
+              { "zutat": "Zucker", "menge": "100 g" },
+              { "zutat": "Backpulver", "menge": "1 TL" },
+              { "zutat": "Zimt", "menge": "1 TL" },
+              { "zutat": "Pflanzenöl", "menge": "50 ml" },
+              { "zutat": "Nüsse", "menge": "100 g" }
+            ],
+            "schwierigkeitsgrad": "leicht",
+            "zubereitungszeit_minuten": 30,
+            "backzeit_min": 45,
+            "instruktionen": [
+              { "schritt_1": "Heize den Ofen auf 175 Grad vor." },
+              { "schritt_2": "Zerdrücke die Bananen in einer Schüssel." },
+              { "schritt_3": "Füge die restlichen Zutaten hinzu und vermische alles gut." },
+              { "schritt_4": "Gieße den Teig in eine Kastenform." },
+              { "schritt_5": "Backe das Bananenbrot für 45 Minuten." },
+              { "schritt_6": "Lass das Brot abkühlen, bevor du es anschneidest." }
+            ],
+            "alternative Zutaten": [
+              { "zutat": "Zucker", "ersatz": "Ahornsirup" }
+            ],
+            "allergene": ["Mehl", "Nüsse"],
+            "energie_in_kcal": 300
+          }
+          
+          
+          
+           
+        ]
+
+);
