@@ -67,6 +67,12 @@ Dazu brauchte ich erst mal ein paar Rezepte. Nun können die Users sie in ihren 
 
 Überlegungen hierzu sind, dass die users nicht eigene Rezepte ... wobei. Die Plattform sollte möglichst vollständig von den Users nutzbar sein und eine Hilfe im Alltag. Warum sollten sie nicht auch eigene Rezepte abspeichern können, wenn sie diese schnell wiederfinden wollen? Technisch ist es sowieso möglich, denn jedes Rezept hat seine eigene Id.
 
+## Users folgen Users
+ Im Prinzip ist es das Gleiche Prinzip wie beim Einfügen des Rezeptbuches.
+ Anmerkung: Nachdem ich bei Insert oder Update einmal Daten eingefügt habe, kommentiere ich den Code in den Playgrounds aus. Man kann immer nur das gesamte Scrippt ausführen. Ließe ich sie einkommentiert, würden jedes Mal, wenn ich das Script ausführe, neue Daten bzw. Datensätze eingefügt.
+
+ Der Code für die Rezeptbücher wird also auskommentiert. Ich update die Datensätze wieder im Playground update.mongodb.js
+
 
 
 
