@@ -585,3 +585,244 @@ Auf den Kommentar mit der _id: "6704f81479a5f79189e23203" antwortet user: "green
 Die übrigen 2 Antworten sollen von users sein, die das jeweilige Rezept ebenfalls ausprobiert haben.
 
 Da ich diese Datensätze in die Collection "kommentare" als Kommentare einfügen will, fällt das erste Feld "_id" auch weg.
+
+## Collection Followers
+
+Ich habe eine MongoDB-Collection namens "users" mit folgenden Datensätzen:
+[
+  {
+    "_id": {
+      "$oid": "66fd53880eabdff47cb41778"
+    },
+    "username": "vegan_chef_mia",
+    "email": "mia.vegan@example.com",
+    "passwort": "$2a$10$KIXm3R8GZ8K8s5QY8g5h8.0N7K5Wg1qTtL2uR8pXH1RzF0B8cN5fO",
+    "profiltext": "Hallo! Ich bin Mia und leidenschaftliche Veganerin. Ich liebe es, neue Rezepte auszuprobieren und gesunde, pflanzliche Mahlzeiten zu kreieren. Mein Ziel ist es, die vegane Küche für alle zugänglich zu machen. Lass uns gemeinsam kochen!",
+    "geburtsdatum": "1985-03-15",
+    "social_links": {
+      "facebook": "facebook.com/vegan_chef_mia",
+      "instagram": "instagram.com/vegan_chef_mia"
+    },
+    "benachrichtigungen_mail": {
+      "kommentare_antworten": true,
+      "bewertungen": true,
+      "neue_follower": true
+    },
+    "rezeptbuch": [
+      {
+        "rezept_id": "66fd61c211cb6c61f5136f12",
+        "rezeptname": "Quinoa-Salat mit Avocado"
+      },
+      {
+        "rezept_id": "66ffe18e2a427df4635b38d1",
+        "rezeptname": "Vegane Bouletten"
+      }
+    ],
+    "folgt": [
+      {
+        "user_id": "66fd53880eabdff47cb4177b",
+        "username": "vegan_victor"
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "66fd53880eabdff47cb4177b"
+    },
+    "username": "vegan_victor",
+    "email": "victor.vegan@example.com",
+    "passwort": "$2a$10$4hW8t3G8t9F8O2e3Z1t7eO1N5K2lG2s6H5T0H1R8H5G2D5F7J5l1C",
+    "profiltext": "Ich bin Victor und ein Fan von veganer Küche! Ich genieße es, neue Rezepte zu kreieren und meine Leidenschaft für gesunde Ernährung mit anderen zu teilen. Kommt mit mir auf eine kulinarische Reise!",
+    "geburtsdatum": "1975-11-30",
+    "social_links": {
+      "facebook": "facebook.com/vegan_victor"
+    },
+    "benachrichtigungen_mail": {
+      "kommentare_antworten": true,
+      "bewertungen": true,
+      "neue_follower": false
+    },
+    "rezeptbuch": [
+      [
+        {
+          "rezept_id": "66ffe18e2a427df4635b38d1",
+          "rezeptname": "Vegane Bouletten"
+        },
+        {
+          "rezept_id": "66fd53880eabdff47cb41778",
+          "rezeptname": "Bunter Linsensalat"
+        },
+        {
+          "rezept_id": "66fd53880eabdff47cb41779",
+          "rezeptname": "Deftiges Seitan-Geschnetzeltes"
+        }
+      ]
+    ],
+    "folgt": [
+      [
+        {
+          "user_id": "66fd53880eabdff47cb41778",
+          "username": "vegan_chef_mia"
+        },
+        {
+          "user_id": "66fd53880eabdff47cb41779",
+          "username": "plantbased_peter"
+        }
+      ]
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "66fd53880eabdff47cb4177c"
+    },
+    "username": "nourish_nina",
+    "email": "nina.nourish@example.com",
+    "passwort": "$2a$10$8F2t3R8H6J5T1y2Y3o7k6eO5L1RzG3F4H5S7B1N0Y4F2D6G4H5x1O",
+    "profiltext": "Hallo, ich bin Nina! Ich interessiere mich für vegane Ernährung und gesunde Lebensweise. Ich teile meine Lieblingsrezepte und Tipps für ein gesundes Leben. Lass uns zusammen die Welt der pflanzlichen Ernährung erkunden!",
+    "social_links": {
+      "instagram": "instagram.com/nourish_nina",
+      "pinterest": "pinterest.com/nourish_nina"
+    },
+    "benachrichtigungen_mail": {
+      "kommentare_antworten": true,
+      "bewertungen": false,
+      "neue_follower": false
+    },
+    "rezeptbuch": [
+      [
+        {
+          "rezept_id": "66fd61c211cb6c61f5136f12",
+          "rezeptname": "Quinoa-Salat mit Avocado"
+        },
+        {
+          "rezept_id": "66ffe18e2a427df4635b38d2",
+          "rezeptname": "Chili Sin Carne"
+        },
+        {
+          "rezept_id": "66fd53880eabdff47cb41779",
+          "rezeptname": "Deftiges Seitan-Geschnetzeltes"
+        },
+        {
+          "rezept_id": "66ffe896218fc63a18c3c745",
+          "rezeptname": "Bruschetta mit Tomaten und Basilikum"
+        }
+      ]
+    ],
+    "folgt": [
+      [
+        {
+          "user_id": "66fd53880eabdff47cb41778",
+          "username": "vegan_chef_mia"
+        },
+        {
+          "user_id": "66fd53880eabdff47cb4177a",
+          "username": "green_guru_lisa"
+        }
+      ]
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "66fd53880eabdff47cb41779"
+    },
+    "username": "plantbased_peter",
+    "email": "peter.plantbased@example.com",
+    "passwort": "$2a$10$JdV4FQW9Tz5qY5e2k3r0oO8M6yGkGZt9R8H1uO1l5y2c6Y7mRzO1i",
+    "profiltext": "Ich bin Peter, ein begeisterter Koch, der sich auf pflanzliche Küche spezialisiert hat. Ich teile gerne meine Tipps und Tricks für die Zubereitung köstlicher veganer Gerichte. Lass uns zusammen die Vielfalt der veganen Küche entdecken!",
+    "social_links": {
+      "instagram": "instagram.com/plantbased_peter",
+      "pinterest": "pinterest.com/plantbased_peter"
+    },
+    "benachrichtigungen_mail": {
+      "kommentare_antworten": true,
+      "bewertungen": false,
+      "neue_follower": true
+    },
+    "rezeptbuch": [
+      [
+        {
+          "rezept_id": "66ffe896218fc63a18c3c747",
+          "rezeptname": "Veganer Schokoladenpudding"
+        },
+        {
+          "rezept_id": "66ffe52fbaf7e37e1a6928b1",
+          "rezeptname": "Reisbandnudelsalat mit Mango und Avocado"
+        },
+        {
+          "rezept_id": "66ffec0963ac16343c81e108",
+          "rezeptname": "Veganer Schokoladenkuchen"
+        }
+      ]
+    ],
+    "folgt": [
+      [
+        {
+          "user_id": "66fd53880eabdff47cb4177a",
+          "username": "green_guru_lisa"
+        },
+        {
+          "user_id": "66fd53880eabdff47cb4177c",
+          "username": "nourish_nina"
+        },
+        {
+          "user_id": "66fd53880eabdff47cb4177b",
+          "username": "vegan_victor"
+        }
+      ]
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "66fd53880eabdff47cb4177a"
+    },
+    "username": "green_guru_lisa",
+    "email": "lisa.green@example.com",
+    "passwort": "$2a$10$7A0l2N2eH6l9Q5r1t8Q5eOe6K1RzF1W8S0N1Z2h8N8Rz4L5B9C5rC",
+    "profiltext": "Ich bin Lisa, die grüne Guru! Ich liebe es, mit frischen Zutaten zu experimentieren und gesunde, vegane Rezepte zu kreieren. Ich teile auch meine Erfahrungen über nachhaltige Lebensstile und Ernährung.",
+    "geburtsdatum": "1990-07-22",
+    "social_links": {
+      "facebook": "facebook.com/green_guru_lisa",
+      "instagram": "instagram.com/green_guru_lisa",
+      "pinterest": "pinterest.com/green_guru_lisa"
+    },
+    "benachrichtigungen_mail": {
+      "kommentare_antworten": false,
+      "bewertungen": false,
+      "neue_follower": false
+    },
+    "rezeptbuch": [
+      [
+        {
+          "rezept_id": "66ffe896218fc63a18c3c746",
+          "rezeptname": "Gegrillte Zucchini mit Erdnussbutter"
+        },
+        {
+          "rezept_id": "66fd53880eabdff47cb41778",
+          "rezeptname": "Bunter Linsensalat"
+        },
+        {
+          "rezept_id": "66ffec0963ac16343c81e109",
+          "rezeptname": "Vegane Zimtschnecken"
+        }
+      ]
+    ],
+    "folgt": [
+      [
+        {
+          "user_id": "66fd53880eabdff47cb41778",
+          "username": "vegan_chef_mia"
+        },
+        {
+          "user_id": "66fd53880eabdff47cb4177c",
+          "username": "nourish_nina"
+        },
+        {
+          "user_id": "66fd53880eabdff47cb41779",
+          "username": "plantbased_peter"
+        }
+      ]
+    ]
+  }
+]
+
+Im Feld "folgt" befinden sich user_id und username der Users, denen ein User folgt. Ich möchte basierend darauf eine Collection namens "followers" haben, in der zu sehen ist, wer den users folgt. Diese Collection nennt sich "followers". Bitte erstelle mir für die Collection followers Datensätze im JSON-Format. Im ersten Feld, das "user" heißt, befindet sich die _id eines users. Da es in dieser Abfrage 5 users gibt, bekommt die Collection also 5 Dokumente. Das zweite Feld ist ein Array und nennt sich "followers". Bitte suche hierfür die Daten der users durch und wo du im Feld "folgt" die id, die im Feld user steht, wiederfindest, trage dessen "user_id" und "username" als Objekt in das Array im Feld "followers" ein.

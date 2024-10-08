@@ -177,4 +177,133 @@ use('planet-A');
 // }
 // );
 
-db.users.find();
+
+
+// db.rezepte.updateMany(
+//     {},
+//     { $set: {
+//       "bewertungen": [] } }
+//   );
+
+  // db.rezepte.updateMany(
+  //   {},
+  //   { $unset: {
+  //     "bewertungen": [] } }
+  // );
+
+
+// db.kommentare.renameCollection("bewertungen");
+
+// db.bewertungen.updateMany(
+//   {"rezept_id": { $exists: true } },
+//   { $set: {
+//     "sternebewertung": [5]
+//   }
+// } );
+
+
+// und jetzt alle kommentierten Rezepte in der Collection updaten:
+
+// db.rezepte.updateOne(
+//     {"_id": ObjectId("66fd61c211cb6c61f5136f12")},
+//     { $set: {
+//       "bewertungen.durchschnitt": 5.0 },
+//       $inc: {
+//         "bewertungen.anzahlBewertungen": 1
+//       }
+//     }
+//   );
+  
+// db.rezepte.updateOne(
+//     {"_id": ObjectId("66ffe896218fc63a18c3c747")},
+//     { $set: {
+//       "bewertungen.durchschnitt": 5.0 },
+//       $inc: {
+//         "bewertungen.anzahlBewertungen": 1
+//       }
+//     }
+//   );
+
+// db.rezepte.updateOne(
+//   {"_id": ObjectId("66fd53880eabdff47cb41778")},
+//     { $set: {
+//       "bewertungen.durchschnitt": 5.0 },
+//       $inc: {
+//         "bewertungen.anzahlBewertungen": 1
+//       }
+//     }
+//   );
+
+// db.rezepte.updateOne(
+//   {"_id": ObjectId("66ffe18e2a427df4635b38d2")},
+//   { $set: {
+//     "bewertungen.durchschnitt": 5.0 },
+//     $inc: {
+//       "bewertungen.anzahlBewertungen": 1
+//     }
+//   }
+// );
+
+
+// db.rezepte.updateOne(
+//   {"_id": ObjectId("66ffe896218fc63a18c3c746")},
+//   { $set: {
+//     "bewertungen.durchschnitt": 5.0 },
+//     $inc: {
+//       "bewertungen.anzahlBewertungen": 1
+//     }
+//   }
+// );
+
+
+// db.rezepte.updateOne(
+//   {"_id": ObjectId("66ffe18e2a427df4635b38d1")},
+//   { $set: {
+//     "bewertungen.durchschnitt": 5.0 },
+//     $inc: {
+//       "bewertungen.anzahlBewertungen": 1
+//     }
+//   }
+// );
+
+
+// db.rezepte.updateOne(
+//   {"_id": ObjectId("66ffe52fbaf7e37e1a6928b1")},
+//   { $set: {
+//     "bewertungen.durchschnitt": 5.0 },
+//     $inc: {
+//       "bewertungen.anzahlBewertungen": 1
+//     }
+//   }
+// );
+
+// db.rezepte.updateOne(
+//   {"_id": ObjectId("66ffe896218fc63a18c3c745")},
+//   { $set: {
+//     "bewertungen.durchschnitt": 5.0 },
+//     $inc: {
+//       "bewertungen.anzahlBewertungen": 1
+//     }
+//   }
+// );
+
+
+// db.rezepte.updateOne(
+//   {"_id": ObjectId("66fd53880eabdff47cb41779")},
+//   { $set: {
+//     "bewertungen.durchschnitt": 5.0 },
+//     $inc: {
+//       "bewertungen.anzahlBewertungen": 1
+//     }
+//   }
+// );
+
+// db.rezepte.updateOne(
+//   {"_id": ObjectId("66ffec0963ac16343c81e109")},
+//   { $set: {
+//     "bewertungen.durchschnitt": 5.0 },
+//     $inc: {
+//       "bewertungen.anzahlBewertungen": 1
+//     }
+//   }
+// );

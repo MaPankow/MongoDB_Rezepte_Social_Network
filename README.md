@@ -52,7 +52,7 @@ Users und ihre Profile kann man auch problemlos zusammenlegen, sofern es nicht r
 
 ## Und was ist mit Followern? Eine eigene Collection? Überlegungen ...
 
-Eine weitere Überlegung ist nunmehr, eine neue Colletion anzulegen, in die nicht eingetragen ist, wem z.B. User1 folgt, sondern andersherum, wer alles User1 folgt. Ich könnte mir vorstellen, dass dies durchaus Sinn ergeben könnte, denn wie soll die Abfrage lauten, wenn User1 wissen möchte, wer ihr/ihm folgt, dann müsste man bei allen Users in die Profile geschaut werden, ob User1 im folgt-Array drinsteht? Ich halte hier eine eigene Collection für sinnvoll, nicht eingebettet, denn so ein Netzwerk soll ja schon mehrere Tausend Users haben und wie viele einer/m User folgen, ist nicht beschränkt. Ich würde zusätzlich zur Referenz auf die Id der Follower auch die Usernames einbetten. So kann User1 jederzeit ihre/seine Follower aufrufen und ihre Namen sehen bzw. zu ihren Profilen gelangen. Und alle anderen können sich die Follower-Liste von User1 auch angucken.
+Eine weitere Überlegung ist nunmehr, eine neue Collection anzulegen, in die nicht eingetragen ist, wem z.B. User1 folgt, sondern andersherum, wer alles User1 folgt. Ich könnte mir vorstellen, dass dies durchaus Sinn ergeben könnte, denn wie soll die Abfrage lauten, wenn User1 wissen möchte, wer ihr/ihm folgt, dann müsste man bei allen Users in die Profile geschaut werden, ob User1 im folgt-Array drinsteht? Ich halte hier eine eigene Collection für sinnvoll, nicht eingebettet, denn so ein Netzwerk soll ja schon mehrere Tausend Users haben und wie viele einer/m User folgen, ist nicht beschränkt. Ich würde zusätzlich zur Referenz auf die Id der Follower auch die Usernames einbetten. So kann User1 jederzeit ihre/seine Follower aufrufen und ihre Namen sehen bzw. zu ihren Profilen gelangen. Und alle anderen können sich die Follower-Liste von User1 auch angucken.
 
 Das ist jetzt erst mal nur Theorie, implementiert habe ich in diese Richtung noch gar nichts.
 
@@ -72,6 +72,45 @@ Dazu brauchte ich erst mal ein paar Rezepte. Nun können die Users sie in ihren 
  Anmerkung: Nachdem ich bei Insert oder Update einmal Daten eingefügt habe, kommentiere ich den Code in den Playgrounds aus. Man kann immer nur das gesamte Scrippt ausführen. Ließe ich sie einkommentiert, würden jedes Mal, wenn ich das Script ausführe, neue Daten bzw. Datensätze eingefügt.
 
  Der Code für die Rezeptbücher wird also auskommentiert. Ich update die Datensätze wieder im Playground update.mongodb.js
+
+ ## Collection Kommentare
+
+ Diese werde ich im Playground insert.mongodb.js erstellen.
+ Und dann frage ich wieder ChatGPT nach ein paar Dummy-Datensätzen.
+
+ Es gibt Kommentare und Antworten auf Kommentare. Die Dokumente unterscheiden sich insofern als die Kommentare die "rezept_id" des Rezeptes in ihrem Dokument haben. Die Antworten bekommen keine rezept_id, dafür aber eine "antwort_auf", unter der die id des Kommentars abgeleggt wird, auf die sich die Antwort bezieht. Beides ist in der Collection kommentare zu finden. Im Plaground abfragen.mongodb.js befinden sich Abfragen, die jeweils die "Ur-Kommentare" filtern und die Antworten.
+
+ ## Collection Followers
+ Weiter vorn hatte ich es angekündigt, dass ich erwäge, die Collection Followers einzufügen. es handelt sich hierbei um eine Redundanz, die ich für den Fall erstellen will, dass die Users schnell abrufen wollen, wie viele und wer ihnen folgt. Aus gewissen sozialen Netzwerken ist mir bekannt, dass es durchaus nicht nur für die Users selbst eine Rolle spielt, wie viele ihnen folgen, sondern für andere Users. Vielleicht könnte eine solche Collection auch Speilereien erlauben, dass die Users anhand ihrer Followerzahl Michelin-Sterne sammeln können oder so etwas.
+
+ Ich werde wieder meinen insert.mongodb.js-Playground benutzen, um die Collection zu erstellen und zu füllen. Vielleicht kann mir hier auch wieder ChatGPT helfen, da in den users-Daten bereits drinsteht, welchen users die users folgen.
+
+
+## Bewertungen
+Zuerst habe ich gedacht, ich bringe die Bewertungen nur bei den Rezepten ein und ein Array für Bewertungen in der Collection erstellt.
+
+Dafür benutzte ich wieder den Playground update.mongodb.js. 
+
+Dann fiel mir aber auf, dass Bewertungen einhergehen könnten und daher auchin der Collection getätigt werden können, wo dann Bewertungen mit oder ohne Kommentar und Kommentare ohne Bewertung (Antworten) gesammelt werden. 
+
+Die Rezepte-Collection sollte zwar auch ein Feld für Bewertungen habe, wo aber lediglich die Anzahl und der Durchschnitt der Bewertungshöhe eingegeben werden. Kein Array. Das wollte ich nun wieder loswerden und habe herausgefunden, nachdem ich es schon eingefügt habe, und habe dafür die $unset-Methode benutzt. Die Datensätze haben nun wieder keine Bewertungen. Vorerst. Erst mal füge ich sie aber in der Collection Kommentare ein. 
+Wenn man auf einen Kommentar antwortet, wird die Antwort weiterhin ohne Rezept_id und dafür mit Kommentar_id abgelegt. Auch eine Bewertung wird nicht im Dokument mit abgespeichert, wenn man auf "Antworten" drückt. Dies wäre beim Programmieren der Anwendung zu beachten.
+
+Also, für die Bewertungen wird es ein Update in der Collection Rezepte geben, welches erfolgt, wenn in der Collection kommentare eine Sternebewertung abgegeben wird. 
+
+Ich lege zunächst die Sternebewertung bei den Kommentaren an. Hier ist sie ein Array, in das jedes Mal, wenn eine Bewertung erfolgt, die Sternebewertung rein gepusht wird. Mir fällt auf, dass ich die Collection in bewertungen umbenennen sollte. MongoDB sei Dank muss ich sie nicht umplanen. Die Sternebewertung steht sozusagen "über" dem Kommentar. Der Kommentar ist etwas, was man der Sternebewertung hinzufügen kann. Auf Anwendungsebene sollte es vielleicht so sein, dass, um einen Kommentar zu schreiben, eine Sternebewertung notwendig ist. Aber eine Sternebewertung ohne Kommentar geht. Die kommt dann einfach ins Array
+Bei meinen Datensätzen füge ich die Sternenbewertung nachträglich ein (hüstel) und da ChatGPT so freundliche Kommentare geschrieben hat, und um das Ganze abzukürzen, gebe ich allen Rezepten erst mal eine Bewertung von 5 Sternen.
+
+Anschließend suche ich mir die rezept_ids aus der Collection raus, damit ich weiß, welche Rezepte eine Bewertung bekommen haben.
+
+Ich update daraufhin die Rezepte mit den entsprechenden ids. Mit dem Befehl $inc: 1, soll jedes Mal, wenn ein neuer Eintrag in in der Bewerungsliste erfolgt, die AnzahlBewertungen um 1 inkrementiert werden. Aus den Zahlen, die sich im Array "sternebewertungen" in der Collection bewertungen ansammeln, soll ein Durchschnitt gebildet und in der Rezepte-Collection geupdatet werden. Das geschieht eigentlich durch die Anwendung, ich trage es jetzt händisch ein.
+
+Auf zum Playgound update.mongodb.js!!!
+
+
+
+
+
 
 
 

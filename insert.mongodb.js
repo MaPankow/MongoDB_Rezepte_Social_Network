@@ -555,45 +555,116 @@ use('planet-A');
 //   ]
 // )
 
-db.kommentare.insertMany([
-  {
-    "user": {
-      "user_id": "66fd53880eabdff47cb4177b",
-      "username": "vegan_victor"
-    },
-    "antwort_auf": "6704f81479a5f79189e231fe",
-    "kommentar": "Vielen Dank für dein tolles Feedback! Es freut mich, dass der vegane Schokoladenpudding so gut angekommen ist. Viel Spaß beim nächsten Ausprobieren!"
-  },
-  {
-    "user": {
-      "user_id": "66fd53880eabdff47cb4177c",
-      "username": "nourish_nina"
-    },
-    "antwort_auf": "6704f81479a5f79189e23206",
-    "kommentar": "Danke für dein nettes Kommentar! Ich freue mich, dass dir die Zimtschnecken so gut geschmeckt haben. Sie sind wirklich ein Hit zum Frühstück!"
-  },
-  {
-    "user": {
-      "user_id": "66fd53880eabdff47cb4177a",
-      "username": "green_guru_lisa"
-    },
-    "antwort_auf": "6704f81479a5f79189e23203",
-    "kommentar": "Ich freue mich, dass dir der Reisbandnudelsalat gefallen hat! Die Kombination aus Mango und Avocado ist wirklich erfrischend."
-  },
-  {
-    "user": {
-      "user_id": "66fd53880eabdff47cb41778",
-      "username": "vegan_chef_mia"
-    },
-    "antwort_auf": "6704f81479a5f79189e231fd",
-    "kommentar": "Es freut mich sehr zu hören, dass dir der Quinoa-Salat so gut geschmeckt hat! Ich liebe die Aromen, die zusammenkommen."
-  },
-  {
-    "user": {
-      "user_id": "66fd53880eabdff47cb41779",
-      "username": "plantbased_peter"
-    },
-    "antwort_auf": "6704f81479a5f79189e23205",
-    "kommentar": "Ich bin froh, dass dir das Seitan-Geschnetzelte geschmeckt hat! Es ist wirklich ein einfaches und leckeres Rezept."
-  }
-]);
+// db.kommentare.insertMany([
+//   {
+//     "user": {
+//       "user_id": "66fd53880eabdff47cb4177b",
+//       "username": "vegan_victor"
+//     },
+//     "antwort_auf": "6704f81479a5f79189e231fe",
+//     "kommentar": "Vielen Dank für dein tolles Feedback! Es freut mich, dass der vegane Schokoladenpudding so gut angekommen ist. Viel Spaß beim nächsten Ausprobieren!"
+//   },
+//   {
+//     "user": {
+//       "user_id": "66fd53880eabdff47cb4177c",
+//       "username": "nourish_nina"
+//     },
+//     "antwort_auf": "6704f81479a5f79189e23206",
+//     "kommentar": "Danke für dein nettes Kommentar! Ich freue mich, dass dir die Zimtschnecken so gut geschmeckt haben. Sie sind wirklich ein Hit zum Frühstück!"
+//   },
+//   {
+//     "user": {
+//       "user_id": "66fd53880eabdff47cb4177a",
+//       "username": "green_guru_lisa"
+//     },
+//     "antwort_auf": "6704f81479a5f79189e23203",
+//     "kommentar": "Ich freue mich, dass dir der Reisbandnudelsalat gefallen hat! Die Kombination aus Mango und Avocado ist wirklich erfrischend."
+//   },
+//   {
+//     "user": {
+//       "user_id": "66fd53880eabdff47cb41778",
+//       "username": "vegan_chef_mia"
+//     },
+//     "antwort_auf": "6704f81479a5f79189e231fd",
+//     "kommentar": "Es freut mich sehr zu hören, dass dir der Quinoa-Salat so gut geschmeckt hat! Ich liebe die Aromen, die zusammenkommen."
+//   },
+//   {
+//     "user": {
+//       "user_id": "66fd53880eabdff47cb41779",
+//       "username": "plantbased_peter"
+//     },
+//     "antwort_auf": "6704f81479a5f79189e23205",
+//     "kommentar": "Ich bin froh, dass dir das Seitan-Geschnetzelte geschmeckt hat! Es ist wirklich ein einfaches und leckeres Rezept."
+//   }
+// ]);
+
+// db.createCollection("followers");
+
+// db.followers.insertMany ([
+  
+//     {
+//       "user": "66fd53880eabdff47cb41778",
+//       "followers": [
+//         {
+//           "user_id": "66fd53880eabdff47cb4177b",
+//           "username": "vegan_victor"
+//         },
+//         {
+//           "user_id": "66fd53880eabdff47cb4177c",
+//           "username": "nourish_nina"
+//         },
+//         {
+//           "user_id": "66fd53880eabdff47cb41779",
+//           "username": "plantbased_peter"
+//         },
+//         {
+//           "user_id": "66fd53880eabdff47cb4177a",
+//           "username": "green_guru_lisa"
+//         }
+//       ]
+//     },
+//     {
+//       "user": "66fd53880eabdff47cb4177b",
+//       "followers": [
+//         {
+//           "user_id": "66fd53880eabdff47cb41778",
+//           "username": "vegan_chef_mia"
+//         }
+//       ]
+//     },
+//     {
+//       "user": "66fd53880eabdff47cb4177c",
+//       "followers": [
+//         {
+//           "user_id": "66fd53880eabdff47cb41778",
+//           "username": "vegan_chef_mia"
+//         }
+//       ]
+//     },
+//     {
+//       "user": "66fd53880eabdff47cb41779",
+//       "followers": [
+//         {
+//           "user_id": "66fd53880eabdff47cb4177a",
+//           "username": "green_guru_lisa"
+//         },
+//         {
+//           "user_id": "66fd53880eabdff47cb4177c",
+//           "username": "nourish_nina"
+//         }
+//       ]
+//     },
+//     {
+//       "user": "66fd53880eabdff47cb4177a",
+//       "followers": [
+//         {
+//           "user_id": "66fd53880eabdff47cb41778",
+//           "username": "vegan_chef_mia"
+//         }
+//       ]
+//     }
+  
+  
+// ]);
+
+
