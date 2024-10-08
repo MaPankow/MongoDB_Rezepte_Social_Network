@@ -67,20 +67,20 @@ Dazu brauchte ich erst mal ein paar Rezepte. Nun können die Users sie in ihren 
 
 Überlegungen hierzu sind, dass die users nicht eigene Rezepte ... wobei. Die Plattform sollte möglichst vollständig von den Users nutzbar sein und eine Hilfe im Alltag. Warum sollten sie nicht auch eigene Rezepte abspeichern können, wenn sie diese schnell wiederfinden wollen? Technisch ist es sowieso möglich, denn jedes Rezept hat seine eigene Id.
 
-## Users folgen Users
- Im Prinzip ist es das Gleiche Prinzip wie beim Einfügen des Rezeptbuches.
+#.# Users folgen Users
+ 08.10.2024: Im Prinzip ist es das Gleiche Prinzip wie beim Einfügen des Rezeptbuches.
  Anmerkung: Nachdem ich bei Insert oder Update einmal Daten eingefügt habe, kommentiere ich den Code in den Playgrounds aus. Man kann immer nur das gesamte Scrippt ausführen. Ließe ich sie einkommentiert, würden jedes Mal, wenn ich das Script ausführe, neue Daten bzw. Datensätze eingefügt.
 
  Der Code für die Rezeptbücher wird also auskommentiert. Ich update die Datensätze wieder im Playground update.mongodb.js
 
- ## Collection Kommentare
+## Collection Kommentare
 
  Diese werde ich im Playground insert.mongodb.js erstellen.
  Und dann frage ich wieder ChatGPT nach ein paar Dummy-Datensätzen.
 
  Es gibt Kommentare und Antworten auf Kommentare. Die Dokumente unterscheiden sich insofern als die Kommentare die "rezept_id" des Rezeptes in ihrem Dokument haben. Die Antworten bekommen keine rezept_id, dafür aber eine "antwort_auf", unter der die id des Kommentars abgeleggt wird, auf die sich die Antwort bezieht. Beides ist in der Collection kommentare zu finden. Im Plaground abfragen.mongodb.js befinden sich Abfragen, die jeweils die "Ur-Kommentare" filtern und die Antworten.
 
- ## Collection Followers
+## Collection Followers
  Weiter vorn hatte ich es angekündigt, dass ich erwäge, die Collection Followers einzufügen. es handelt sich hierbei um eine Redundanz, die ich für den Fall erstellen will, dass die Users schnell abrufen wollen, wie viele und wer ihnen folgt. Aus gewissen sozialen Netzwerken ist mir bekannt, dass es durchaus nicht nur für die Users selbst eine Rolle spielt, wie viele ihnen folgen, sondern für andere Users. Vielleicht könnte eine solche Collection auch Speilereien erlauben, dass die Users anhand ihrer Followerzahl Michelin-Sterne sammeln können oder so etwas.
 
  Ich werde wieder meinen insert.mongodb.js-Playground benutzen, um die Collection zu erstellen und zu füllen. Vielleicht kann mir hier auch wieder ChatGPT helfen, da in den users-Daten bereits drinsteht, welchen users die users folgen.
@@ -109,7 +109,11 @@ Auf zum Playgound update.mongodb.js!!!
 
 
 
+## Klassendiagramm nachher
 
+!["Klassendiagramm meiner Datenbank nach Erstellung"](/klassendiagramm_nachher.png)
+
+Das Klassendiagramm enthält nun die Änderungen vom (vielleicht vorerst?) letzten Projekttag, dem 08.10.2024.
 
 
 
