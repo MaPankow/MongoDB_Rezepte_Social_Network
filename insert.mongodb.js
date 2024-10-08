@@ -361,109 +361,239 @@ use('planet-A');
 
 // );
 
-db.rezepte.insertMany(
-    [
-        {
-            "user": {
-              "user_id": { "$oid": "66fd53880eabdff47cb4177c" },
-              "username": "nourish_nina"
-            },
-            "rezeptname": "Veganer Schokoladenkuchen",
-            "kategorien": ["Gebäck", "Nachspeise"],
-            "zutaten": [
-              { "zutat": "Mehl", "menge": "250 g" },
-              { "zutat": "Zucker", "menge": "200 g" },
-              { "zutat": "Kakaopulver", "menge": "50 g" },
-              { "zutat": "Backpulver", "menge": "1 Päckchen" },
-              { "zutat": "pflanzliche Milch", "menge": "200 ml" },
-              { "zutat": "Öl", "menge": "100 ml" },
-              { "zutat": "Apfelmus", "menge": "100 g" }
-            ],
-            "schwierigkeitsgrad": "mittel",
-            "zubereitungszeit_minuten": 45,
-            "backzeit_min": 30,
-            "instruktionen": [
-              { "schritt_1": "Heize den Ofen auf 180 Grad vor." },
-              { "schritt_2": "Vermische alle trockenen Zutaten in einer Schüssel." },
-              { "schritt_3": "Füge die feuchten Zutaten hinzu und verrühre alles gut." },
-              { "schritt_4": "Gieße den Teig in eine gefettete Kuchenform." },
-              { "schritt_5": "Backe den Kuchen für 30 Minuten." },
-              { "schritt_6": "Lass den Kuchen abkühlen und serviere ihn." }
-            ],
-            "alternative Zutaten": [
-              { "zutat": "Zucker", "ersatz": "Agavendicksaft" }
-            ],
-            "allergene": ["Mehl", "Öl"],
-            "energie_in_kcal": 350
-          },
-          {
-            "user": {
-              "user_id": { "$oid": "66fd53880eabdff47cb4177c" },
-              "username": "nourish_nina"
-            },
-            "rezeptname": "Vegane Zimtschnecken",
-            "kategorien": ["Gebäck", "Nachspeise", "Hefe"],
-            "zutaten": [
-              { "zutat": "Mehl", "menge": "500 g" },
-              { "zutat": "Hefe", "menge": "1 Päckchen" },
-              { "zutat": "Zucker", "menge": "100 g" },
-              { "zutat": "pflanzliche Milch", "menge": "250 ml" },
-              { "zutat": "Öl", "menge": "75 ml" },
-              { "zutat": "Zimt", "menge": "2 TL" },
-              { "zutat": "Salz", "menge": "1 Prise" }
-            ],
-            "schwierigkeitsgrad": "mittel",
-            "zubereitungszeit_minuten": 60,
-            "backzeit_min": 25,
-            "instruktionen": [
-              { "schritt_1": "Erwärme die pflanzliche Milch und löse die Hefe darin auf." },
-              { "schritt_2": "Vermische das Mehl, Zucker, Salz und Zimt in einer Schüssel." },
-              { "schritt_3": "Füge die Hefe-Milch-Mischung und das Öl hinzu und knete den Teig." },
-              { "schritt_4": "Lass den Teig an einem warmen Ort für 30 Minuten ruhen." },
-              { "schritt_5": "Rolle den Teig aus, bestreue ihn mit Zimt und Zucker, und forme die Schnecken." },
-              { "schritt_6": "Backe die Zimtschnecken bei 180 Grad für 25 Minuten." }
-            ],
-            "allergene": ["Mehl", "Öl"],
-            "energie_in_kcal": 250
-          },
+// db.rezepte.insertMany(
+//     [
+//         {
+//             "user": {
+//               "user_id": { "$oid": "66fd53880eabdff47cb4177c" },
+//               "username": "nourish_nina"
+//             },
+//             "rezeptname": "Veganer Schokoladenkuchen",
+//             "kategorien": ["Gebäck", "Nachspeise"],
+//             "zutaten": [
+//               { "zutat": "Mehl", "menge": "250 g" },
+//               { "zutat": "Zucker", "menge": "200 g" },
+//               { "zutat": "Kakaopulver", "menge": "50 g" },
+//               { "zutat": "Backpulver", "menge": "1 Päckchen" },
+//               { "zutat": "pflanzliche Milch", "menge": "200 ml" },
+//               { "zutat": "Öl", "menge": "100 ml" },
+//               { "zutat": "Apfelmus", "menge": "100 g" }
+//             ],
+//             "schwierigkeitsgrad": "mittel",
+//             "zubereitungszeit_minuten": 45,
+//             "backzeit_min": 30,
+//             "instruktionen": [
+//               { "schritt_1": "Heize den Ofen auf 180 Grad vor." },
+//               { "schritt_2": "Vermische alle trockenen Zutaten in einer Schüssel." },
+//               { "schritt_3": "Füge die feuchten Zutaten hinzu und verrühre alles gut." },
+//               { "schritt_4": "Gieße den Teig in eine gefettete Kuchenform." },
+//               { "schritt_5": "Backe den Kuchen für 30 Minuten." },
+//               { "schritt_6": "Lass den Kuchen abkühlen und serviere ihn." }
+//             ],
+//             "alternative Zutaten": [
+//               { "zutat": "Zucker", "ersatz": "Agavendicksaft" }
+//             ],
+//             "allergene": ["Mehl", "Öl"],
+//             "energie_in_kcal": 350
+//           },
+//           {
+//             "user": {
+//               "user_id": { "$oid": "66fd53880eabdff47cb4177c" },
+//               "username": "nourish_nina"
+//             },
+//             "rezeptname": "Vegane Zimtschnecken",
+//             "kategorien": ["Gebäck", "Nachspeise", "Hefe"],
+//             "zutaten": [
+//               { "zutat": "Mehl", "menge": "500 g" },
+//               { "zutat": "Hefe", "menge": "1 Päckchen" },
+//               { "zutat": "Zucker", "menge": "100 g" },
+//               { "zutat": "pflanzliche Milch", "menge": "250 ml" },
+//               { "zutat": "Öl", "menge": "75 ml" },
+//               { "zutat": "Zimt", "menge": "2 TL" },
+//               { "zutat": "Salz", "menge": "1 Prise" }
+//             ],
+//             "schwierigkeitsgrad": "mittel",
+//             "zubereitungszeit_minuten": 60,
+//             "backzeit_min": 25,
+//             "instruktionen": [
+//               { "schritt_1": "Erwärme die pflanzliche Milch und löse die Hefe darin auf." },
+//               { "schritt_2": "Vermische das Mehl, Zucker, Salz und Zimt in einer Schüssel." },
+//               { "schritt_3": "Füge die Hefe-Milch-Mischung und das Öl hinzu und knete den Teig." },
+//               { "schritt_4": "Lass den Teig an einem warmen Ort für 30 Minuten ruhen." },
+//               { "schritt_5": "Rolle den Teig aus, bestreue ihn mit Zimt und Zucker, und forme die Schnecken." },
+//               { "schritt_6": "Backe die Zimtschnecken bei 180 Grad für 25 Minuten." }
+//             ],
+//             "allergene": ["Mehl", "Öl"],
+//             "energie_in_kcal": 250
+//           },
 
-          {
-            "user": {
-              "user_id": { "$oid": "66fd53880eabdff47cb4177c" },
-              "username": "nourish_nina"
-            },
-            "rezeptname": "Veganes Bananenbrot",
-            "kategorien": ["Gebäck", "Nachspeise"],
-            "zutaten": [
-              { "zutat": "Bananen", "menge": "3 Stück" },
-              { "zutat": "Mehl", "menge": "200 g" },
-              { "zutat": "Zucker", "menge": "100 g" },
-              { "zutat": "Backpulver", "menge": "1 TL" },
-              { "zutat": "Zimt", "menge": "1 TL" },
-              { "zutat": "Pflanzenöl", "menge": "50 ml" },
-              { "zutat": "Nüsse", "menge": "100 g" }
-            ],
-            "schwierigkeitsgrad": "leicht",
-            "zubereitungszeit_minuten": 30,
-            "backzeit_min": 45,
-            "instruktionen": [
-              { "schritt_1": "Heize den Ofen auf 175 Grad vor." },
-              { "schritt_2": "Zerdrücke die Bananen in einer Schüssel." },
-              { "schritt_3": "Füge die restlichen Zutaten hinzu und vermische alles gut." },
-              { "schritt_4": "Gieße den Teig in eine Kastenform." },
-              { "schritt_5": "Backe das Bananenbrot für 45 Minuten." },
-              { "schritt_6": "Lass das Brot abkühlen, bevor du es anschneidest." }
-            ],
-            "alternative Zutaten": [
-              { "zutat": "Zucker", "ersatz": "Ahornsirup" }
-            ],
-            "allergene": ["Mehl", "Nüsse"],
-            "energie_in_kcal": 300
-          }
+//           {
+//             "user": {
+//               "user_id": { "$oid": "66fd53880eabdff47cb4177c" },
+//               "username": "nourish_nina"
+//             },
+//             "rezeptname": "Veganes Bananenbrot",
+//             "kategorien": ["Gebäck", "Nachspeise"],
+//             "zutaten": [
+//               { "zutat": "Bananen", "menge": "3 Stück" },
+//               { "zutat": "Mehl", "menge": "200 g" },
+//               { "zutat": "Zucker", "menge": "100 g" },
+//               { "zutat": "Backpulver", "menge": "1 TL" },
+//               { "zutat": "Zimt", "menge": "1 TL" },
+//               { "zutat": "Pflanzenöl", "menge": "50 ml" },
+//               { "zutat": "Nüsse", "menge": "100 g" }
+//             ],
+//             "schwierigkeitsgrad": "leicht",
+//             "zubereitungszeit_minuten": 30,
+//             "backzeit_min": 45,
+//             "instruktionen": [
+//               { "schritt_1": "Heize den Ofen auf 175 Grad vor." },
+//               { "schritt_2": "Zerdrücke die Bananen in einer Schüssel." },
+//               { "schritt_3": "Füge die restlichen Zutaten hinzu und vermische alles gut." },
+//               { "schritt_4": "Gieße den Teig in eine Kastenform." },
+//               { "schritt_5": "Backe das Bananenbrot für 45 Minuten." },
+//               { "schritt_6": "Lass das Brot abkühlen, bevor du es anschneidest." }
+//             ],
+//             "alternative Zutaten": [
+//               { "zutat": "Zucker", "ersatz": "Ahornsirup" }
+//             ],
+//             "allergene": ["Mehl", "Nüsse"],
+//             "energie_in_kcal": 300
+//           }
           
           
           
            
-        ]
+//         ]
 
-);
+// );
+
+// db.createCollection("kommentare");
+// db.kommentare.insertMany(
+//   [
+//     {
+//       "user": {
+//         "user_id": "66fd53880eabdff47cb41778",
+//         "username": "vegan_chef_mia"
+//       },
+//       "rezept_id": "66fd61c211cb6c61f5136f12",
+//       "kommentar": "Ich habe den Quinoa-Salat mit Avocado zubereitet und er war einfach köstlich! Die Kombination der Aromen hat meine Gäste begeistert. Definitiv ein Rezept, das ich wieder machen werde!"
+//     },
+//     {
+//       "user": {
+//         "user_id": "66fd53880eabdff47cb41779",
+//         "username": "plantbased_peter"
+//       },
+//       "rezept_id": "66ffe896218fc63a18c3c747",
+//       "kommentar": "Der vegane Schokoladenpudding war ein Hit auf der letzten Dinner-Party! Alle waren überrascht, dass er ganz ohne tierische Produkte auskommt. Ich werde das Rezept unbedingt weiterempfehlen!"
+//     },
+//     {
+//       "user": {
+//         "user_id": "66fd53880eabdff47cb4177b",
+//         "username": "vegan_victor"
+//       },
+//       "rezept_id": "66fd53880eabdff47cb41778",
+//       "kommentar": "Ich habe den bunten Linsensalat ausprobiert und er war sehr einfach zuzubereiten. Die Gäste waren begeistert von den Farben und dem Geschmack. Ein tolles veganes Gericht!"
+//     },
+//     {
+//       "user": {
+//         "user_id": "66fd53880eabdff47cb4177c",
+//         "username": "nourish_nina"
+//       },
+//       "rezept_id": "66ffe18e2a427df4635b38d2",
+//       "kommentar": "Das Chili Sin Carne war einfach fantastisch! Ich habe es für meine Familie gekocht und sie konnten nicht glauben, dass es vegan ist. Es hat allen sehr gut geschmeckt!"
+//     },
+//     {
+//       "user": {
+//         "user_id": "66fd53880eabdff47cb4177a",
+//         "username": "green_guru_lisa"
+//       },
+//       "rezept_id": "66ffe896218fc63a18c3c746",
+//       "kommentar": "Die gegrillten Zucchini mit Erdnussbutter waren eine wunderbare Überraschung. Ich habe sie als Beilage serviert und alle waren begeistert von der Kombination. Vegan und lecker!"
+//     },
+//     {
+//       "user": {
+//         "user_id": "66fd53880eabdff47cb41778",
+//         "username": "vegan_chef_mia"
+//       },
+//       "rezept_id": "66ffe18e2a427df4635b38d1",
+//       "kommentar": "Die veganen Bouletten waren ein voller Erfolg! Ich habe sie für ein BBQ zubereitet und alle Gäste waren begeistert. Sie haben gar nicht gemerkt, dass es keine Fleischbouletten sind!"
+//     },
+//     {
+//       "user": {
+//         "user_id": "66fd53880eabdff47cb41779",
+//         "username": "plantbased_peter"
+//       },
+//       "rezept_id": "66ffe52fbaf7e37e1a6928b1",
+//       "kommentar": "Der Reisbandnudelsalat mit Mango und Avocado war eine erfrischende Ergänzung zu meinem Sommeressen. Die Gäste waren begeistert von den frischen Aromen. Vegan und super lecker!"
+//     },
+//     {
+//       "user": {
+//         "user_id": "66fd53880eabdff47cb4177c",
+//         "username": "nourish_nina"
+//       },
+//       "rezept_id": "66ffe896218fc63a18c3c745",
+//       "kommentar": "Die Bruschetta mit Tomaten und Basilikum war ein einfaches, aber köstliches Rezept. Ich habe es als Vorspeise serviert und die Gäste waren begeistert von der Frische und dem Geschmack!"
+//     },
+//     {
+//       "user": {
+//         "user_id": "66fd53880eabdff47cb4177b",
+//         "username": "vegan_victor"
+//       },
+//       "rezept_id": "66fd53880eabdff47cb41779",
+//       "kommentar": "Das deftige Seitan-Geschnetzelte habe ich für ein Familienessen gekocht. Es war einfach zuzubereiten und hat allen sehr gut geschmeckt. Vegan und sehr sättigend!"
+//     },
+//     {
+//       "user": {
+//         "user_id": "66fd53880eabdff47cb4177a",
+//         "username": "green_guru_lisa"
+//       },
+//       "rezept_id": "66ffec0963ac16343c81e109",
+//       "kommentar": "Die veganen Zimtschnecken waren ein süßer Traum! Ich habe sie zum Frühstück gemacht und alle waren begeistert. Es ist erstaunlich, wie gut vegane Backwaren schmecken können!"
+//     }
+  
+//   ]
+// )
+
+db.kommentare.insertMany([
+  {
+    "user": {
+      "user_id": "66fd53880eabdff47cb4177b",
+      "username": "vegan_victor"
+    },
+    "antwort_auf": "6704f81479a5f79189e231fe",
+    "kommentar": "Vielen Dank für dein tolles Feedback! Es freut mich, dass der vegane Schokoladenpudding so gut angekommen ist. Viel Spaß beim nächsten Ausprobieren!"
+  },
+  {
+    "user": {
+      "user_id": "66fd53880eabdff47cb4177c",
+      "username": "nourish_nina"
+    },
+    "antwort_auf": "6704f81479a5f79189e23206",
+    "kommentar": "Danke für dein nettes Kommentar! Ich freue mich, dass dir die Zimtschnecken so gut geschmeckt haben. Sie sind wirklich ein Hit zum Frühstück!"
+  },
+  {
+    "user": {
+      "user_id": "66fd53880eabdff47cb4177a",
+      "username": "green_guru_lisa"
+    },
+    "antwort_auf": "6704f81479a5f79189e23203",
+    "kommentar": "Ich freue mich, dass dir der Reisbandnudelsalat gefallen hat! Die Kombination aus Mango und Avocado ist wirklich erfrischend."
+  },
+  {
+    "user": {
+      "user_id": "66fd53880eabdff47cb41778",
+      "username": "vegan_chef_mia"
+    },
+    "antwort_auf": "6704f81479a5f79189e231fd",
+    "kommentar": "Es freut mich sehr zu hören, dass dir der Quinoa-Salat so gut geschmeckt hat! Ich liebe die Aromen, die zusammenkommen."
+  },
+  {
+    "user": {
+      "user_id": "66fd53880eabdff47cb41779",
+      "username": "plantbased_peter"
+    },
+    "antwort_auf": "6704f81479a5f79189e23205",
+    "kommentar": "Ich bin froh, dass dir das Seitan-Geschnetzelte geschmeckt hat! Es ist wirklich ein einfaches und leckeres Rezept."
+  }
+]);
